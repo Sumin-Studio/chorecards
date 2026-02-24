@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ECEAE8;
+  --bg-alt: #EDEBE9;
+  --card-bg: #F0F0F0;
+  --ui-dark: #414141;
+  --text-primary: #414141;
+  --text-muted: #AFAFAF;
+  --text-empty: #CFCFCF;
+  --border: #C6C6C6;
+  --border-dark: #D6D3D3;
+  --accent-purple: #6E00FF;
+  --img-placeholder: #DDAEE3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-courier-prime), 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Graph paper background */
+.graph-paper {
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgba(255, 255, 255, 0.9) 23px,
+      rgba(255, 255, 255, 0.9) 24.24px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 23px,
+      rgba(255, 255, 255, 0.9) 23px,
+      rgba(255, 255, 255, 0.9) 24.24px
+    );
+}
+
+/* Primary CTA button */
+.btn-primary {
+  background: var(--ui-dark);
+  color: #FFFFFF;
+  border-radius: 32px;
+  font-family: var(--font-courier-prime), 'Courier New', Courier, monospace;
+  font-weight: 700;
+  box-shadow: inset 0px 4px 4px #616060;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.85; }
+.btn-primary:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* Secondary button */
+.btn-secondary {
+  background: #FBFBFB;
+  color: var(--ui-dark);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  font-family: var(--font-courier-prime), 'Courier New', Courier, monospace;
+  box-shadow:
+    0px 1px 2px rgba(0,0,0,0.10),
+    -2px 3px 4px rgba(0,0,0,0.09),
+    -4px 7px 5px rgba(0,0,0,0.05),
+    inset 0px 4px 0.1px #FFFFFF;
+  transition: opacity 0.15s;
+}
+.btn-secondary:hover { opacity: 0.8; }
+
+/* Pill header chip */
+.pill-header {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  font-family: var(--font-courier-prime), 'Courier New', Courier, monospace;
+  font-weight: 700;
+  box-shadow:
+    0px 1px 2px rgba(0,0,0,0.10),
+    -2px 3px 4px rgba(0,0,0,0.09),
+    -4px 7px 5px rgba(0,0,0,0.05),
+    inset 0px 4px 0.1px #FFFFFF;
+}
