@@ -87,3 +87,42 @@ body {
     -4px 7px 5px rgba(0,0,0,0.05),
     inset 0px 4px 0.1px #FFFFFF;
 }
+
+/* ── Pack opening animations ── */
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes legendary-pulse {
+  0%, 100% { box-shadow: 0 0 16px rgba(255,158,22,0.4), 0 4px 16px rgba(0,0,0,0.2); }
+  50%       { box-shadow: 0 0 32px rgba(255,158,22,0.7), 0 4px 16px rgba(0,0,0,0.2); }
+}
+
+@keyframes legendary-foil {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.pack-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+.pack-foil {
+  animation: legendary-foil 4s ease infinite;
+  background-size: 200% 200%;
+}
+
+.legendary-shimmer {
+  animation: legendary-foil 2s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Card flip */
+.card-flip-container {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
